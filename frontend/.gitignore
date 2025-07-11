@@ -23,4 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 
+# .env file containing Clerk API
 .env
