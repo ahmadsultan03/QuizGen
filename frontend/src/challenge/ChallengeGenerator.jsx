@@ -51,16 +51,16 @@ export function ChallengeGenerator() {
     }
 
     return <div className="challenge-container">
-        <h2>Coding Challenge Generator</h2>
+        <h2>Smart Question Generator for AI & Machine Learning</h2>
 
         <div className="quota-display">
-            <p>Challenges remaining today: {quota?.quota_remaining || 0}</p>
+            <p>Today’s Challenge Limit: {quota?.quota_remaining || 0}</p>
             {quota?.quota_remaining === 0 && (
                 <p>Next reset: {getNextResetTime()?.toLocaleString()}</p>
             )}
         </div>
         <div className="difficulty-selector">
-            <label htmlFor="difficulty">Select Difficulty</label>
+            <label htmlFor="difficulty">Pick Skill Level</label>
             <select
                 id="difficulty"
                 value={difficulty}
@@ -78,7 +78,7 @@ export function ChallengeGenerator() {
             disabled={isLoading || quota?.quota_remaining === 0}
             className="generate-button"
         >
-            {isLoading ? "Generating..." : "Generate Challenge"}
+            {isLoading ? "Building..." : "Build My Quiz"}
         </button>
 
         {error && <div className="error-message">

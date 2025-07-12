@@ -9,8 +9,8 @@ export function Layout() {
                 <h1>QuizGen</h1>
                 <nav>
                     <SignedIn>
-                        <Link to="/">Generate Challenge</Link>
-                        <Link to="/history">History</Link>
+                        <Link to="/">Build My Quiz</Link>
+                        <Link to="/history">Quiz Log</Link>
                         <UserButton/>
                     </SignedIn>
                 </nav>
