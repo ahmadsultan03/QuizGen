@@ -1,5 +1,6 @@
-from fastapi import FastAPI, Request, Response
-from fastspi.middleware.cors import CORSMiddleware
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from .routes import challenge, webhooks
 
 app = FastAPI()
 
@@ -10,3 +11,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"]
 )
+
+
+app.include_router(challenge.router, prefix="/api")
+# app.include_router(webhooks.router, prefix="/webhooks")
