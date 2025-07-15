@@ -38,8 +38,8 @@ A modern Quiz Generation Application that creates AI and ML multiple-choice ques
 
 ## 🛠️ Display
 
+![Display](frontend/assets/quiz_gen_app.png)
 ![Display](frontend/assets/user_auth.png)
-![Display](frontend/assets/quiz_gen.png)
 ![Display](frontend/assets/history.png)
 
 ## 📋 Prerequisites
