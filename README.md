@@ -36,6 +36,12 @@ A modern Quiz Generation Application that creates AI and ML multiple-choice ques
 - **Ngrok** - Secure tunneling for local development
 - **UV** - Fast Python package manager
 
+## 🛠️ Display
+
+![Display](frontend/assets/user_auth.png)
+![Display](frontend/assets/quiz_gen.png)
+![Display](frontend/assets/history.png)
+
 ## 📋 Prerequisites
 
 Before you begin, ensure you have the following installed:
