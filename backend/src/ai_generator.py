@@ -25,7 +25,8 @@ def generate_challenge_with_ai(difficulty: str) -> Dict[str, Any]:
         "explanation": "Detailed explanation of why the correct answer is right"
     }
 
-    Make sure the options are plausible but with only one clearly correct answer.
+    Make sure the options are plausible but with only one clearly correct answer. 
+    Randomize the position of the correct answer among the four options — it should not always be first.
     """
 
     try:
