@@ -9,7 +9,7 @@ export function Layout() {
                 <h1>QuizGen</h1>
                 <nav>
                     <SignedIn>
-                        <Link to="/">Build My Quiz</Link>
+                        <a href="/">Build My Quiz</a> {/* Full page reload */}
                         <Link to="/history">Quiz Log</Link>
                         <UserButton/>
                     </SignedIn>
