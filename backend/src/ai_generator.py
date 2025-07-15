@@ -1,5 +1,6 @@
 import os
 import json
+import random
 
 from openai import OpenAI
 from typing import Dict, Any
@@ -43,10 +44,23 @@ def generate_challenge_with_ai(difficulty: str) -> Dict[str, Any]:
         content = response.choices[0].message.content
         challenge_data = json.loads(content)
 
+        # After validating required fields
         required_fields = ["title", "options", "correct_answer_id", "explanation"]
         for field in required_fields:
             if field not in challenge_data:
                 raise ValueError(f"Missing required field: {field}")
+
+        # Randomize options and correct answer index
+        options = challenge_data["options"]
+        correct_index = challenge_data["correct_answer_id"]
+        correct_answer = options[correct_index]
+
+        shuffled_options = options[:]
+        random.shuffle(shuffled_options)
+        new_correct_index = shuffled_options.index(correct_answer)
+
+        challenge_data["options"] = shuffled_options
+        challenge_data["correct_answer_id"] = new_correct_index
 
         return challenge_data
 
